@@ -1,22 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body
-{
- background: #fff;
- min-height: 200vh;
+body {
+    background: #fff;
+    min-height: 200vh;
 }
 
-frun
-{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -29,7 +26,9 @@ frun
 
     z-index: 100000;
 }
-frun , div.navbar{
+
+header,
+div.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -40,21 +39,20 @@ frun , div.navbar{
     transition: 0.6s;
     padding: 40px 100px;
 }
+
 /* muda o tamanho do box */
-frun.Active
-{
+header.Active {
     padding: 35px 100px;
     background: #fff;
-    
+
 }
+
 /*   mudar a position das letras    */
-div.navbar.Active1
-{
+div.navbar.Active1 {
     padding: 15px 100px;
 }
 
-frun .logo 
-{
+header .logo {
     position: relative;
     font-weight: 700;
     color: #fff;
@@ -65,8 +63,7 @@ frun .logo
     transition: 0.6s;
 }
 
-frun ul
-{
+header ul {
     position: relative;
     display: flex;
     justify-content: center;
@@ -74,14 +71,12 @@ frun ul
     align-items: center;
 }
 
-frun ul li
-{
+header ul li {
     position: relative;
     list-style: none;
 }
 
-frun ul  li a
-{
+header ul li a {
     position: relative;
     margin: 0 15px;
     text-decoration: none;
@@ -90,8 +85,8 @@ frun ul  li a
     font-weight: 500px;
     transition: 0.6s;
 }
-.Banner
-{
+
+.Banner {
     position: relative;
     width: 100%;
     height: 80vh;
@@ -101,9 +96,9 @@ frun ul  li a
     background: #2e2e2e;
     background-size: cover;
 }
-frun.Active .logo,
-frun.Active ul li a
-{
+
+header.Active .logo,
+header.Active ul li a {
     color: #000;
 
 }
@@ -111,26 +106,97 @@ frun.Active ul li a
 
 .about {
     position: relative;
-    
+
     width: 100%;
     height: 20vh;
     background: #f2f2f2;
 }
-/* efeito no button  */
-.button-eff
-{
-    
-}
 
-.button-eff:hover
-{
+/* efeito no button  */
+
+.button-eff:hover {
     color: white;
     background: rgb(34, 34, 34);
     margin: 10px;
     padding: 10px;
     border-radius: 20px;
 }
+
 /* grid */
 
+#checkbox-menu {
+    position: absolute;
+    opacity: 0;
+}
 
-  
+label {
+    cursor: pointer;
+    position: relative;
+    display: none;
+    height: 22px;
+    width: 25px;
+}
+
+label span {
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 30px;
+    background: rgb(255, 255, 255);
+    transition: 0.3s ease-in-out;
+}
+
+label span:nth-child(1) {
+    top: 0;
+}
+
+label span:nth-child(2) {
+    top: 8px;
+}
+
+label span:nth-child(3) {
+    top: 16px;
+}
+
+#checkbox-menu:checked+label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+#checkbox-menu:checked+label span:nth-child(2) {
+    opacity: 0;
+}
+
+#checkbox-menu:checked+label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+
+
+/* hamburge 1821 px 100vh */
+@media only screen and (max-width: 1821) {
+    #checkbox-menu, label span
+    {
+        display: none;
+    }
+    
+}
+
+/* hamburge 800 px 100vh */
+@media only screen and (max-width: 800px) {
+    .hamb {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: all 0.5s;
+        right: -100%;
+      }
+      label {
+          display: block;
+      }
+
+    
+}
