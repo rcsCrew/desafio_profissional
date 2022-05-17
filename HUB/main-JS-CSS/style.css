@@ -116,8 +116,20 @@ frun.Active ul li a
     height: 20vh;
     background: #f2f2f2;
 }
+/* efeito no button  */
+.button-eff
+{
+    
+}
 
-
+.button-eff:hover
+{
+    color: white;
+    background: rgb(34, 34, 34);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
 /* grid */
 
 
