@@ -293,6 +293,14 @@ label span:nth-child(3) {
 
 	padding-left: 18vh;
 	padding-right: 18vh;
+	padding-top: 5vh;
+}
+.text-d-q p {
+	background: white;
+	margin-left: 45%;
+	margin-bottom: 5vh;
+	width: 150px;
+	height: 3px;
 }
 
 .text-d-q h1 {
@@ -302,6 +310,10 @@ label span:nth-child(3) {
 .text-d-q h2 {
 	color: white;
 	border-radius: 20px;
+}
+.bottom-d-q {
+	height: 10vh;
+	width: 10vh;
 }
 
 .wpcf7-form-control {
@@ -347,7 +359,12 @@ label span:nth-child(3) {
 	padding-right: 153%;
 }
 	
+footer {
+	background: #1e272c;
+	color: white;
 
+	text-align: center;
+}
 
 
 /* RESPONSIVE */
